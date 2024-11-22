@@ -1,0 +1,33 @@
+<html>
+
+<head>
+
+    <title>Display Object and Array</title>
+</head>
+
+<body>
+    <h1>Object and Array Display</h1>
+    <div id="output"></div>
+
+    <script>
+        let data = {
+            name: "Student",
+            age: 12,
+            hobbies: ["coding", "gaming", "reading"]
+        };
+
+        let output = "";
+        for (let key in data) {
+            output += key + ": ";
+            if (Array.isArray(data[key])) {
+                output += data[key].join(", ") + "<br>";
+            } else {
+                output += data[key] + "<br>";
+            }
+        }
+
+        document.getElementById("output").innerHTML = output;
+    </script>
+</body>
+
+</html>
